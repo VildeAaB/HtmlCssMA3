@@ -1,0 +1,544 @@
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  row-gap: 6em;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  grid-area: header;
+}
+
+.top-banner {
+  display: grid;
+  grid-area: top-banner;
+}
+
+.banner-logo {
+  grid-area: banner-logo;
+}
+
+.banner-heading {
+  grid-area: banner-heading;
+}
+
+.banner-cart {
+  grid-area: banner-cart;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+  color: green;
+  padding: 10px;
+}
+
+nav a:hover {
+  font-weight: bold;
+}
+
+.hamburger-label {
+  color: green;
+  padding: 2em;
+  padding: 10px;
+  font-size: 1.5em;
+  display: block;
+}
+
+input {
+  width: 5em;
+  border: 0px solid black;
+  font: 1em;
+  font-family: "Truculenta", sans-serif;
+  background-color: rgb(189, 252, 153);
+  clear: both;
+}
+
+input:hover {
+  background-color: rgb(126, 231, 84);
+  clear: both;
+}
+
+.menu {
+  grid-area: menu;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  row-gap: 8em;
+}
+
+.ad-and-photo-carousel {
+  grid-area: ad-and-photo-carousel;
+  display: grid;
+  justify-items: center;
+}
+
+.left-ad {
+  grid-area: left-ad;
+}
+
+.photo-carousel {
+  grid-area: photo-carousel;
+}
+
+.right-ad {
+  grid-area: right-ad;
+}
+
+.categories {
+  grid-area: categories;
+  display: grid;
+  justify-items: center;
+}
+
+.first-line-categories {
+  display: grid;
+  grid-area: first-line-categories;
+}
+
+.ski-and-snowboard {
+  grid-area: ski-and-snowboard;
+}
+
+.camping {
+  grid-area: camping;
+}
+
+.canoe {
+  grid-area: canoe;
+}
+
+.information {
+  grid-area: information;
+  display: grid;
+  border: solid black 1px;
+  width: 100%;
+  justify-items: center;
+}
+
+.truck {
+  grid-area: truck;
+  margin: 0.5em;
+}
+
+.truck * {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.clock {
+  grid-area: clock;
+  margin: 0.5em;
+}
+
+.clock * {
+  display: inline-block;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.second-line-categories {
+  grid-area: second-line-categories;
+  display: grid;
+}
+
+.women {
+  grid-area: women;
+}
+
+.hiking {
+  grid-area: hiking;
+}
+
+.men {
+  grid-area: men;
+}
+
+.products {
+  grid-area: products;
+  display: grid;
+}
+
+.product-title {
+  grid-area: product-title;
+}
+
+.product-images {
+  grid-area: product-images;
+  display: grid;
+}
+
+.product-image1 {
+  grid-area: product-image1;
+}
+
+.product-image2 {
+  grid-area: product-image2;
+}
+
+.product-image3 {
+  grid-area: product-image3;
+}
+
+.product-image4 {
+  grid-area: product-image4;
+}
+
+.product-image5 {
+  grid-area: product-image5;
+}
+
+.product-image6 {
+  grid-area: product-image6;
+}
+
+.product-image7 {
+  grid-area: product-image7;
+}
+
+.product-image8 {
+  grid-area: product-image8;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+}
+
+.footer-about {
+  grid-area: footer-about;
+}
+
+.footer-media {
+  grid-area: footer-media;
+}
+
+/* mobile styles */
+@media only screen and (max-width: 480px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  header {
+    grid-template-areas:
+      "top-banner"
+      "menu";
+  }
+
+  .top-banner {
+    grid-template-areas:
+      "banner-logo"
+      "banner-cart";
+  }
+
+  .banner-heading {
+    display: none;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #hamburger-menu:checked ~ nav {
+    display: block;
+  }
+
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "photo-carousel";
+  }
+
+  .left-ad {
+    display: none;
+  }
+
+  .right-ad {
+    display: none;
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas:
+      "ski-and-snowboard"
+      "camping"
+      "canoe";
+  }
+
+  .information {
+    grid-template-areas:
+      "truck"
+      "clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas:
+      "women"
+      "hiking"
+      "men";
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1"
+      "product-image2"
+      "product-image3"
+      "product-image4"
+      "product-image5"
+      "product-image6"
+      "product-image7"
+      "product-image8";
+    row-gap: 1em;
+  }
+
+  .footer {
+    grid-template-areas:
+      "footer-about"
+      "footer-media";
+  }
+}
+
+/*tablet styles*/
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  header {
+    grid-template-areas:
+      "top-banner"
+      "menu";
+  }
+
+  .top-banner {
+    grid-template-areas: "banner-logo banner-cart";
+  }
+
+  .banner-heading {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+  .hamburger-label {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "photo-carousel";
+    column-gap: 1em;
+  }
+
+  .left-ad {
+    display: none;
+  }
+
+  .right-ad {
+    display: none;
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas:
+      "ski-and-snowboard"
+      "camping"
+      "canoe";
+  }
+
+  .information {
+    grid-template-areas:
+      "truck"
+      "clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas:
+      "women"
+      "hiking"
+      "men";
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+    justify-items: center;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1 product-image2"
+      "product-image3 product-image4"
+      "product-image5 product-image6"
+      "product-image7 product-image8";
+    column-gap: 1em;
+    row-gap: 1em;
+  }
+
+  .footer {
+    grid-template-areas:
+      "footer-about"
+      "footer-media";
+    justify-items: center;
+  }
+}
+
+/*desktop styles*/
+@media only screen and (min-width: 769px) {
+  body {
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+
+  header {
+    grid-template-areas:
+      "top-banner"
+      "menu";
+  }
+
+  .top-banner {
+    grid-template-areas: "banner-logo banner-heading banner-cart";
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+  .hamburger-label {
+    display: none;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  main {
+    grid-template-areas:
+      "ad-and-photo-carousel"
+      "categories"
+      "products";
+  }
+
+  .ad-and-photo-carousel {
+    grid-template-areas: "left-ad photo-carousel photo-carousel photo-carousel right-ad";
+    column-gap: 1em;
+  }
+
+  .categories {
+    grid-template-areas:
+      "first-line-categories"
+      "information"
+      "second-line-categories";
+    row-gap: 5em;
+  }
+
+  .first-line-categories {
+    grid-template-areas: "ski-and-snowboard camping canoe";
+    column-gap: 1em;
+  }
+
+  .information {
+    grid-template-areas: "truck clock";
+  }
+
+  .second-line-categories {
+    grid-template-areas: "women hiking men";
+    column-gap: 1em;
+  }
+
+  .products {
+    grid-template-areas:
+      "product-title"
+      "product-images";
+    row-gap: 3em;
+    justify-items: center;
+  }
+
+  .product-images {
+    grid-template-areas:
+      "product-image1 product-image2 product-image3 product-image4 product-image5"
+      ". product-image6 product-image7 product-image8 .";
+    column-gap: 1em;
+    row-gap: 8em;
+  }
+
+  .footer {
+    grid-template-areas: "footer-about footer-media";
+    justify-items: center;
+  }
+}
